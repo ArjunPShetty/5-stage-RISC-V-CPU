@@ -1,34 +1,32 @@
 # UART TX/RX — Verilog 
 
-This project implements a complete UART communication system in Verilog, 
-including both Transmitter (TX) and Receiver (RX). The design is fully 
-synthesizable and verified using a behavioral testbench.
+UART TX/RX Project (Vivado RTL)
 
- 🚀 Features 
-✔ UART Transmitter (TX)  
+This project implements a complete UART Transmitter (TX) and Receiver (RX) in Verilog, along with a top-level integration module and a simulation testbench. It is designed to run entirely in AMD Vivado without requiring any FPGA hardware.
+ 
+Features 
+✔ UART Transmitter (TX) 
+Parameterized clock frequency and baud rate 
+Generates start bit, 8 data bits, stop bit 
+Signals tx_done when transmission is complete 
+Fully synchronous logic 
+ 
 ✔ UART Receiver (RX)  
-✔ Parameterized Baud Rate  
-✔ Parameterized Clock Frequency  
-✔ Start, Data, and Stop bits  
-✔ Fully synthesizable (Vivado tested)  
-✔ Complete Testbench Included  
+Detects start bit and samples incoming bits 
+Reconstructs 8-bit data 
+Signals rx_done after a full byte is received 
+Uses double-synced RX input 
+ 
+✔ Top Module (UART_TOP) 
+Connects TX output to RX input 
+Provides a complete loopback system 
+Perfect for simulation and debugging 
 
-📡 UART Protocol Overview  
-This design uses:
-- **1 Start bit (0)**
-- **8 Data bits (LSB first)**
-- **1 Stop bit (1)**
-- **Baud Tick Generator** derived from system clock
+✔ Testbench (uart_tb.v) 
+Generates clock 
+Automates TX send sequences 
+Waits for RX reception 
 
-🧩 TX Module (UART_TX)  
-- Converts parallel 8-bit data into serial output
-- Generates proper baud timing
-- Outputs start + data + stop bits
-- Provides `tx_busy` status
+Simulates two test bytes (A5 and 3C)
 
-🧩 RX Module (UART_RX)  
-- Samples incoming serial data
-- Detects start bit
-- Captures 8 serial bits
-- Stores final byte in `rx_data`
-- Pulses `rx_done` when a byte is received
+Ends simulation automatically
