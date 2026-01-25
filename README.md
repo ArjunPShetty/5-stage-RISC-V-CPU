@@ -1,9 +1,6 @@
 # UART_TX-RX
 
 UART_TX-RX is an open-source, synthesizable **Universal Asynchronous Receiver–Transmitter (UART)** core written in **Verilog HDL**.
-The project follows **industry-style RTL design, verification, and documentation practices** and is suitable for **ASIC, FPGA, and educational use**.
-
-This repository is designed to be **beginner-friendly**, allowing contributors with basic Verilog knowledge to participate, while also providing scope for advanced enhancements.
 
 ---
 
@@ -32,5 +29,33 @@ This project provides a **modular UART implementation** consisting of:
 * Simulation automation scripts
 * FPGA-ready constraint support
 * Beginner-friendly and extensible
+
+---
+
+License
+This project is licensed under the MIT License.
+See the LICENSE file for details.
+
+Maintainer
+Arjun P Shetty
+Open to collaboration, mentorship, and community contributions.
+
+---
+
+## Documentation
+Detailed design and verification documents are available in the `docs/` directory.
+
+## Contributing
+Please read `CONTRIBUTING.md` before submitting changes.
+
+## Security
+See `SECURITY.md` for responsible disclosure.
+
+## Getting Started
+
+### Clone the Repository
+```bash
+git clone https://github.com/ArjunPShetty/UART_TX-RX.git
+cd UART_TX-RX
 
 
