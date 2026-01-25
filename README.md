@@ -32,8 +32,7 @@ This project provides a **modular UART implementation** consisting of:
 
 ---
 
-License
-This project is licensed under the MIT License.
+MIT LICENSE
 See the LICENSE file for details.
 
 Maintainer
