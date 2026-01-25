@@ -1,30 +1,36 @@
-# UART TX/RX — Verilog 
+# UART_TX-RX
 
-UART TX/RX Project (Vivado RTL)
+UART_TX-RX is an open-source, synthesizable **Universal Asynchronous Receiver–Transmitter (UART)** core written in **Verilog HDL**.
+The project follows **industry-style RTL design, verification, and documentation practices** and is suitable for **ASIC, FPGA, and educational use**.
 
-This project implements a complete UART Transmitter (TX) and Receiver (RX) in Verilog, along with a top-level integration module and a simulation testbench. It is designed to run entirely in AMD Vivado without requiring any FPGA hardware.
- 
-Features 
-✔ UART Transmitter (TX)  
-Parameterized clock frequency and baud rate  
-Generates start bit, 8 data bits, stop bit  
-Signals tx_done when transmission is complete  
-Fully synchronous logic  
- 
-✔ UART Receiver (RX)  
-Detects start bit and samples incoming bits  
-Reconstructs 8-bit data  
-Signals rx_done after a full byte is received  
-Uses double-synced RX input  
- 
-✔ Top Module (UART_TOP)    
-Connects TX output to RX input  
-Provides a complete loopback system  
-Perfect for simulation and debugging  
- 
-✔ Testbench (uart_tb.v)  
-Generates clock  
-Automates TX send sequences  
-Waits for RX reception  
-Simulates two test bytes (A5 and 3C)  
-Ends simulation automatically  
+This repository is designed to be **beginner-friendly**, allowing contributors with basic Verilog knowledge to participate, while also providing scope for advanced enhancements.
+
+---
+
+## Overview
+
+UART (Universal Asynchronous Receiver–Transmitter) is a widely used serial communication protocol in embedded systems and SoCs.
+This project provides a **modular UART implementation** consisting of:
+
+* UART Transmitter (TX)
+* UART Receiver (RX)
+* Configurable baud rate generator
+* Optional FIFO buffering
+* Top-level integration module
+* Verification-ready testbenches
+
+---
+
+## Key Features
+
+* Fully synthesizable **Verilog RTL**
+* Separate TX and RX modules
+* Configurable baud rate
+* FIFO-based buffering support
+* Clean and modular RTL structure
+* Loopback and directed testbenches
+* Simulation automation scripts
+* FPGA-ready constraint support
+* Beginner-friendly and extensible
+
+
